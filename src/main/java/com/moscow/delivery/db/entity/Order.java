@@ -22,18 +22,19 @@ public class Order {
     private Long id;
 
     @Column(name = "sender_name")
-    private String sendName;
+    private String senderName;
     @Column(name = "sender_phone_number")
-    private String phoneNumber;
+    private String senderPhoneNumber;
     @Column(name = "sender_address")
-    private String address;
+    private String senderAddress;
 
     @Column(name = "getter_phone_number")
-    private String getPhoneNumber;
+    private String  recipientPhoneNumber;
     @Column(name = "getter_name")
-    private String getName;
+    private String  recipientName;
     @Column(name = "getter_address")
-    private String getAddress;
+    private String  recipientAddress;
+
 
     @Enumerated(EnumType.STRING)
     private Region region;
