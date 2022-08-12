@@ -21,14 +21,14 @@ public class OrderStatus {
     @GeneratedValue(generator = "orderStatus_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "order_id")
     private Order order;
 
     @Column(name = "local_date")
     private LocalDate localDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "status_id")
     private Status status;
 

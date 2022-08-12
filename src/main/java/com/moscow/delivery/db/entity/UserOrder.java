@@ -20,11 +20,11 @@ public class UserOrder {
     @GeneratedValue(generator = "UserOrder_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "order_id")
     private Order order;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "driver_id")
     private  User user;
 

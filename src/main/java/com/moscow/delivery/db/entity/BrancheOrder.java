@@ -17,7 +17,7 @@ public class BrancheOrder {
     @JoinColumn(name = "branche_id")
     private Branche branche;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "order_id")
     private Order order;
     

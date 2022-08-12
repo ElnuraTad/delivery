@@ -22,7 +22,7 @@ public class Status {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private TariffStatus status;
+    private OrdStatus status;
     
     @ManyToOne()
     @JoinColumn(name = "tarif_id")

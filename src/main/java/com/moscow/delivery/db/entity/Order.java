@@ -49,7 +49,7 @@ public class Order {
     @Column(name = "total_sum_oforder")
     private String totalSumOfOrder;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "client_id")
     private Client client;
 

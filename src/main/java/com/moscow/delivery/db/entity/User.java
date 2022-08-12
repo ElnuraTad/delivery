@@ -39,9 +39,12 @@ public class User {
     private Long INN;
     private boolean availabilityCar;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "branche_id")
     private Branche branche;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 
 
