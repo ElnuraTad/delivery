@@ -25,11 +25,12 @@ public class OrderStatus {
     @JoinColumn(name = "order_id")
     private Order order;
 
+    @Column(name = "local_date")
+    private LocalDate localDate;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id")
     private Status status;
-
-    private LocalDate localdate;
 
     private boolean isActive;
 

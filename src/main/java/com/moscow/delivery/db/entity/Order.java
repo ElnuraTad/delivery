@@ -21,18 +21,18 @@ public class Order {
     @GeneratedValue(generator = "order_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "order_send_name")
+    @Column(name = "sender_name")
     private String sendName;
-    @Column(name = "order_phone_number")
+    @Column(name = "sender_phone_number")
     private String phoneNumber;
-    @Column(name = "order_address")
+    @Column(name = "sender_address")
     private String address;
 
-    @Column(name = "order_getPhoneNumber")
+    @Column(name = "getter_phone_number")
     private String getPhoneNumber;
-    @Column(name = "order_getName")
+    @Column(name = "getter_name")
     private String getName;
-    @Column(name = "order_getAddress")
+    @Column(name = "getter_address")
     private String getAddress;
 
     @Enumerated(EnumType.STRING)
@@ -40,14 +40,14 @@ public class Order {
 
     //private City city;
 
-    @Column(name = "order_boxWeight")
+    @Column(name = "box_weight")
     private String boxWeight;
-    @Column(name = "order_boxPrice")
-    private String box_price;
-    @Column(name = "order_boxInfo")
+    @Column(name = "box_price")
+    private String boxPrice;
+    @Column(name = "box_info")
     private String boxInfo;
-    @Column(name = "order_totalSumPrice")
-    private String totalSumPrice;
+    @Column(name = "total_sum_oforder")
+    private String totalSumOfOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")

@@ -22,18 +22,26 @@ public class Client {
     @GeneratedValue(generator = "client_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "client_firstName")
+    @Column(name = "first_name")
     private String firstName;
-    @Column(name = "client_lastname")
+    @Column(name = "last_name")
     private String lastName;
-    @Column(name = "client_email")
+    @Column(name = "email")
     private String email;
-    @Column(name = "client_phoneNumber")
+    @Column(name = "phone_number")
     private int phoneNumber;
-    @Column(name = "client_password")
+    @Column(name = "password")
     private String password;
-    @Column(name = "client_address")
+    @Column(name = "address")
     private String address;
+    @Column(name = "located_country")
+    private String locatedCountry;
+    @Column(name = "inn")
+    private Long INN;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
 
 
 

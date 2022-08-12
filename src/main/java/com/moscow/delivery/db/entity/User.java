@@ -25,25 +25,25 @@ public class User {
     @GeneratedValue(generator = "user_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "user_first_name")
+    @Column(name = "first_name")
     private String firstName;
-    @Column(name = "user_last_name")
+    @Column(name = "last_name")
     private String lastName;
-    @Column(name = "user_email")
+    @Column(name = "email")
     private String email;
-    @Column(name = "user_password")
+    @Column(name = "password")
     private String password;
-    @Column(name = "user_address")
-    private String address;
+    @Column(name = "located_country")
+    private String locatedCountry;
     @Column(name = "inn")
     private Long INN;
-
+    private boolean availabilityCar;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "branche_id")
     private Branche branche;
 
-    private boolean isActiveDriver;
+
 
 
 }

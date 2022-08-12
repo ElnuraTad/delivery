@@ -27,5 +27,9 @@ public class Status {
     @ManyToOne()
     @JoinColumn(name = "tarif_id")
     private Tariff tariff;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 }
 

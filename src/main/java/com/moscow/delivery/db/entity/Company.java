@@ -22,14 +22,14 @@ public class Company {
     @GeneratedValue(generator = "company_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "company_name")
+    @Column(name = "name")
     private String name;
-    @Column(name = "company_email")
+    @Column(name = "email")
     private String email;
-    @Column(name = "cmpany_address")
+    @Column(name = "address")
     private String address;
-    @Column(name = "company_phoneNumber")
-    private Long phone_number;
-
-    private LocalDate date;
+    @Column(name = "phone_number")
+    private Long phoneNumber;
+    @Column(name = "create_date")
+    private LocalDate createDate;
 }

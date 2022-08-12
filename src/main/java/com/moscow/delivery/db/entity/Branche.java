@@ -23,13 +23,13 @@ public class Branche {
     @GeneratedValue(generator = "branche_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "branche_name")
+    @Column(name = "name")
     private String name;
-    @Column(name = "branche_email")
+    @Column(name = "email")
     private String email;
-    @Column(name = "branche_address")
+    @Column(name = "address")
     private String address;
-    @Column(name = "branche_phoneNumber")
+    @Column(name = "phone_number")
     private Long phoneNumber;
 
     @Enumerated(EnumType.STRING)
